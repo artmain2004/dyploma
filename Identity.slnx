@@ -1,0 +1,13 @@
+<Solution>
+  <Project Path="Catalog.Tests/Catalog.Tests.csproj" />
+  <Project Path="Catalog/Catalog.csproj" />
+  <Project Path="docker-compose.dcproj">
+    <Build />
+  </Project>
+  <Project Path="Identity.Tests/Identity.Tests.csproj" />
+  <Project Path="Identity/Identity.csproj" />
+  <Project Path="Notification.Tests/Notification.Tests.csproj" />
+  <Project Path="Notification/Notification.csproj" />
+  <Project Path="Order.Tests/Order.Tests.csproj" />
+  <Project Path="Order/Order.csproj" />
+</Solution>
