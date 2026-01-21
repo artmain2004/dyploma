@@ -10,6 +10,7 @@ import OrderDetailsPage from "../pages/OrderDetailsPage";
 import OrderSuccessPage from "../pages/OrderSuccessPage";
 import ForgotPasswordPage from "../pages/ForgotPasswordPage";
 import ResetPasswordPage from "../pages/ResetPasswordPage";
+import ConfirmEmailPage from "../pages/ConfirmEmailPage";
 import ChangePasswordPage from "../pages/ChangePasswordPage";
 import ProfilePage from "../pages/ProfilePage";
 import FavoritesPage from "../pages/FavoritesPage";
@@ -53,6 +54,7 @@ const AppRouter = () => {
       <Route path="/register" element={<RegisterPage />} />
       <Route path="/forgot-password" element={<ForgotPasswordPage />} />
       <Route path="/reset-password" element={<ResetPasswordPage />} />
+      <Route path="/confirm-email" element={<ConfirmEmailPage />} />
       <Route path="/change-password" element={<RequireAuth><ChangePasswordPage /></RequireAuth>} />
       <Route path="/my-orders" element={<RequireAuth><MyOrdersPage /></RequireAuth>} />
       <Route path="/orders/:id" element={<RequireAuth><OrderDetailsPage /></RequireAuth>} />

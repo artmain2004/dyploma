@@ -212,9 +212,9 @@ namespace Identity.Services
             var confirmationToken = await _userManager.GenerateEmailConfirmationTokenAsync(newUser);
             var encodedToken = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(confirmationToken));
 
-            var baseUrl = "http://localhost:8080";
+            var frontendBase = _config["Frontend:BaseUrl"] ?? "http://localhost:5173";
             var confirmUrl =
-                $"{baseUrl}/api/Identity/ConfirmEmail" +
+                $"{frontendBase}/confirm-email" +
                 $"?userId={Uri.EscapeDataString(newUser.Id)}" +
                 $"&token={Uri.EscapeDataString(encodedToken)}";
 

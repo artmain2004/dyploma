@@ -21,6 +21,9 @@ export const authApi = {
   confirmResetPassword: async (payload: { email: string; resetCode: string; newPassword: string }) => {
     await apiClient.post(`${baseUrl}/api/identity/confirmresetpassword`, payload);
   },
+  confirmEmail: async (payload: { userId: string; token: string }) => {
+    await apiClient.get(`${baseUrl}/api/identity/confirmemail`, { params: payload });
+  },
   changePassword: async (payload: { email: string; currentPassword: string; newPassword: string }) => {
     await apiClient.post(`${baseUrl}/api/identity/changepassword`, payload);
   },
